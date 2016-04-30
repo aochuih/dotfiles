@@ -1,1 +1,1 @@
-# dotfiles
+# dotfilesFrom an idea by Oliver CaldwellBlog: http://oli.me.uk/2015/06/17/wrangling-javascript-with-vim/GitHub: https://github.com/Olical/dotfiles
