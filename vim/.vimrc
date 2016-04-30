@@ -241,6 +241,7 @@ set viminfo^=%
 """"""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
+set number
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
@@ -453,8 +454,27 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'walm/jshint.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
+" General conceal settings. Will keep things concealed
+" even when your cursor is on top of them.
+set conceallevel=1
+set concealcursor=nvic
+
+"
+
 " NerdTree Toggle
 map <C-l> :NERDTreeToggle<CR>
+
+" UltiSnips
+" Trigger configuration. 
+let g:UltiSnipsExpandTrigger="<leader><enter>" " Do not use <tab> if you use Valloric/YouCompleteMe.
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/plugged/vim-snippets/snippets"
+
+
